@@ -8,6 +8,7 @@ $dbname = '';   // Name der Datenbank
 $username = '';   // Name des DB-Users
 $password = '';  // Passwort des DB-Users
 
+
 // DSN (Datenquellenname) für PDO
 $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4"; // siehe https://en.wikipedia.org/wiki/Data_source_name
 

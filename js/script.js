@@ -7,6 +7,7 @@
 }
 showAll(); */
 
+//
 // ----------------------------
 // Abfrage eines Datensatzes mit id
 /* let idForm = document.querySelector("#idSearch");
