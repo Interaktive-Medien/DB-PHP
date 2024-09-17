@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Erstellungszeit: 17. Apr 2024 um 14:23
--- Server-Version: 10.3.31-MariaDB-0+deb10u1
--- PHP-Version: 7.0.33-57+0~20211119.61+debian10~1.gbp5d8ba5
+-- Host: localhost
+-- Erstellungszeit: 17. Sep 2024 um 05:26
+-- Server-Version: 10.11.6-MariaDB-0+deb12u1
+-- PHP-Version: 8.2.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `539197_41_1`
+-- Datenbank: `528634_1_1`
 --
 
 -- --------------------------------------------------------
@@ -31,16 +32,18 @@ CREATE TABLE `User` (
   `firstname` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `timestamp` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+  `regtime` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=COMPACT;
 
 --
 -- Daten für Tabelle `User`
 --
 
-INSERT INTO `User` (`id`, `firstname`, `lastname`, `email`, `timestamp`) VALUES
+INSERT INTO `User` (`id`, `firstname`, `lastname`, `email`, `regtime`) VALUES
 (1, 'Aline', 'Weisser', 'aline@fhgr.ch', '2024-02-10 09:44:57'),
-(2, 'Urs', 'Thöny', 'urs@fhgr.ch', '2024-03-10 16:17:03');
+(2, 'Urs', 'Thöny', 'urs@fhgr.ch', '2024-03-10 16:17:03'),
+(3, 'Wolfgang', 'Bock', 'wolfgang.bock@fhgr.ch', '2024-09-16 07:07:45'),
+(4, 'John', 'Doe', 'jd@gmail.com', '2024-09-16 13:25:41');
 
 --
 -- Indizes der exportierten Tabellen
@@ -61,7 +64,9 @@ ALTER TABLE `User`
 -- AUTO_INCREMENT für Tabelle `User`
 --
 ALTER TABLE `User`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
